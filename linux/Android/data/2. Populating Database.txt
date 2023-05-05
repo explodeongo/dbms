@@ -1,0 +1,18 @@
+-- Inserting data into EMPLOYEE table
+INSERT INTO EMPLOYEE (Eno, Ename, Job_type, Manager, Hire_date, Dno, Commission, Salary)
+VALUES 
+	('001', 'John Doe', 'Manager', NULL, '2021-01-01', 1, NULL, 5000),
+    ('002', 'Jane Smith', 'Employee', '001', '2021-02-01', 1, 1000, 4000),
+    ('003', 'Bob Brown', 'Employee', '001', '2021-03-01', 2, NULL, 4500),
+    ('004', 'Alice Johnson', 'Employee', '001', '2021-04-01', 2, 500, 3000),
+    ('005', 'Mike Davis', 'Manager', NULL, '2021-05-01', 3, NULL, 5500),
+    ('006', 'Sara Miller', 'Employee', '005', '2021-06-01', 3, 200, 3500),
+    ('007', 'Tom Wilson', 'Employee', '005', '2021-07-01', 4, NULL, 4000),
+    ('008', 'Emma Thompson', 'Employee', '005', '2021-08-01', 4, 300, 3200);
+
+-- Inserting data into DEPARTMENT table
+INSERT INTO DEPARTMENT (Dno, Dname, Location)
+VALUES  (1, 'IT', 'New Delhi'),
+		(2, 'Finance', 'New Delhi'),
+		(3, 'HR', 'New Delhi'),
+        (4, 'Admin', 'New Delhi');

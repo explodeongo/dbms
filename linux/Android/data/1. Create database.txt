@@ -1,0 +1,25 @@
+
+create database myDatabase;
+use myDatabase;
+
+-- Creating DEPARTMENT table
+CREATE TABLE DEPARTMENT (
+    Dno INTEGER NOT NULL PRIMARY KEY,
+    Dname VARCHAR(50),
+    Location VARCHAR(50) DEFAULT 'New Delhi'
+);
+
+-- Creating EMPLOYEE table
+CREATE TABLE EMPLOYEE (
+    Eno CHAR(3) NOT NULL PRIMARY KEY,
+    Ename VARCHAR(50) NOT NULL,
+    Job_type VARCHAR(50) NOT NULL,
+    Manager CHAR(3),
+    Hire_date DATE NOT NULL,
+    Dno INTEGER,
+    Commission DECIMAL(10,2),
+    Salary DECIMAL(7,2) NOT NULL,
+    FOREIGN KEY (Manager) REFERENCES EMPLOYEE(Eno),
+    FOREIGN KEY (Dno) REFERENCES DEPARTMENT(Dno)
+);
+
